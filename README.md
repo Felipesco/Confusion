@@ -1,5 +1,4 @@
-# Confusion
-## Basicamente um "__*Cantinho da bagunça*__" 😄😅
+# Confusion - Basicamente um "__*Cantinho da bagunça*__" 😅😅
 ---
 ### Bem Vindo(a)
 O **Confucion** (ou _Cantinho da Bagunça_) é um lugar onde meus testes, estudos, coisas a fazer... Vão se encontrar aqui.
