@@ -1,0 +1,5 @@
+tipo = input('Digite algo: ')
+print('É número?', tipo.isnumeric())
+print('É alfanumérico?', tipo.isalnum())
+print('É letra?', tipo.isalpha())
+print('É dicima?', tipo.isdecimal())

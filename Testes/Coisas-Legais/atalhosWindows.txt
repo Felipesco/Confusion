@@ -1,0 +1,45 @@
+Atalhos Windows:
+
+Área de Trabalho{
+	Win + Ctrl + D -- nova area de trabalho 
+	Win + Ctrl + setas -- Muda de área de trabalho
+	Win + Ctrl + F4 -- Fecha uma área de trabalho
+	Win + M -- Miniminiza todas janelas abertas
+	Win + ,< -- "Espiar" área de trabalho
+	Alt + Ctrl + Tab -- Quase mesma coisa que o Alt Tab
+}
+
+Texto{
+	Ctrl + setas -- Navegar entre as palavras 
+	Ctrl + home -- Pula para o começo 
+	Ctrl + end -- Pula para o fial
+	Ctrl + Backspace -- Apaga palavra por palavra 
+	Shift + setas -- Seleciona as palavras por onde passa
+ 	Win + . -- Abre caixa de Emojis
+}
+
+Navegação{
+	Win + T -- Navega pela barra de ferramentas
+	Win + setas -- Organiza as janelas abertas na tela 
+	Win + número -- O numero corresponde a ordem da sua barra de ferramentas(Tipo, o Explorer tá em primeiro. Win + 1 abrirá o Explorer)
+	Win + E -- Abre o Explorador de Arq.
+	Win + Print Screen -- Salva o print numa pasta de captura 
+	Win + Shift + S -- Pergunta qual parte da tela você quer capturar 
+	Win + V -- Abre a área de Transferência
+	Ctrl + Alt + Del -- Abre o Gerenciador de tarefas e mais opções
+	Ctrl + Shift + Esc -- Abre só o gerenciador de tarefas 
+	Ctrl + W -- Fecha as Abas do navegador 
+	Ctrl + F4 -- Fecha as abas do navegador também
+	Ctrl + Shift + T -- Abre aba recem fechada no navegador
+	Alt + P -- Pré visualização de um arquivo 
+}
+
+Barra de tarefas{
+	Ctrl + F -- Procura uma palavra/Arquivo/nome em especifico
+	Clica com o botão direito na barra de tarefas e aperta E -- "Organiza" as janelas abertas 
+}
+
+Pastas e Arquivos{
+	Win + -- Abre a lupa
+	Shift + Delete -- Não manda para a lixeira, exclui permanentemente 
+}

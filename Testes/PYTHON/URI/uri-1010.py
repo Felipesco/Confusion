@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+codigo1, numPeca1, valorPeca1 = input().split()
+codigo2, numPeca2, valorPeca2 = input().split()
+c1 = int(codigo1)
+c2 = int(codigo2)
+n1 = int(numPeca1)
+n2 = int(numPeca2)
+valor1 = float(valorPeca1)
+valor2 = float(valorPeca2)
+valorTotal = (n1 * valor1) + (n2 * valor2)
+print('VALOR A PAGAR: R$ {:.2f}'.format(valorTotal))

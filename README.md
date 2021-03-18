@@ -15,8 +15,6 @@ Dentro da pasta de *Testes* haverá outras pastas, e nelas vão ter os códigos 
 1. Testes
     * Coisas-Legais
       * Arquivos Soltos
-    * PHP
-       * Pasta de projeto
     * JAVA
        * Aquivos soltos
        * Pasta de projeto
@@ -34,7 +32,6 @@ Dentro da pasta *Estudos* haverá pastas com  as metérias. Exemplo:
    * BDII
    * PWII
    * DS
-   * PAM
 
 Bem assim 🥰
 
