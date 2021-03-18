@@ -2,10 +2,12 @@
 
 ---
 
-## Bem Vindo(a)
+## Bem Vindo(a) ❤️😍😝
+Antes de tudo, obrigado por entrar nesse repositório ❤️
+
 O **Confucion** (ou _Cantinho da Bagunça_) é um lugar onde meus testes, estudos, coisas legais que fiz... Vão se encontrar aqui.
 
----
+Logo aqui em baixo tem as "informações" sobre pastas do **Confusion**. Segue elas: 
 
 ### Testes
 Dentro da pasta de *Testes* haverá outras pastas, e nelas vão ter os códigos e/ou projetos(prjNomePasta). Exemplo:
@@ -29,8 +31,13 @@ Assim vai...
 Dentro da pasta *Estudos* haverá pastas com  as metérias. Exemplo:
 
 1. ETEC-2021
-   * Matéria Tal
-   * Matéria Tal
-   * Matéria Tal
+   * BDII
+   * PWII
+   * DS
+   * PAM
 
-Nese nipe.
+Bem assim 🥰
+
+---
+
+Até então o **Confusion** é apenas isso. Caso qualquer coisa, eu atualizo o README 😃.
