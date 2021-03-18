@@ -41,3 +41,5 @@ Bem assim 🥰
 ---
 
 Até então o **Confusion** é apenas isso. Caso qualquer coisa, eu atualizo o README 😃.
+
+Muito Obrigado ❣️
