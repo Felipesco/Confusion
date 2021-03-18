@@ -13,15 +13,15 @@ Logo aqui em baixo tem as "informações" sobre pastas do **Confusion**. Segue e
 Dentro da pasta de *Testes* haverá outras pastas, e nelas vão ter os códigos e/ou projetos(prjNomePasta). Exemplo:
 
 1. Testes
-  * Coisas-Legais
-    * Arquivos Soltos
-  * PHP
-     * Pasta de projeto
-  * JAVA
-     * Aquivos soltos
-     * Pasta de projeto
-  * PYTHON
-     * Arquivos soltos
+    * Coisas-Legais
+      * Arquivos Soltos
+    * PHP
+       * Pasta de projeto
+    * JAVA
+       * Aquivos soltos
+       * Pasta de projeto
+    * PYTHON
+       * Arquivos soltos
 
 Assim vai...
 
