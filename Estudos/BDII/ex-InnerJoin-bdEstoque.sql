@@ -50,5 +50,21 @@ SELECT AVG(valorProduto) AS 'Preço Médio', nomeFornecedor AS 'Fornecedor' FROM
 			GROUP BY nomeFornecedor
 
 -- i) Listar a soma das vendas agrupadas pelo nome do produto;
-
+SELECT SUM(valorTotalVenda) AS 'Soma das vendas', descricaoProduto AS 'Produto'  FROM tbVenda
+	INNER JOIN tbItensVenda ON tbVenda.idVenda = tbItensVenda.idVenda
+		INNER JOIN tbProduto ON tbItensVenda.idProduto = tbProduto.idProduto
+			GROUP BY descricaoProduto
+ 
 -- j) Listar a soma das vendas pelo nome do cliente somente das vendas realizadas em fevereiro de 2014.
+SELECT SUM(valorTotalVenda) AS 'Soma das vendas', nomeCliente AS 'Cliente' FROM tbVenda
+	INNER JOIN tbCliente 
+		ON tbCliente.idCliente = tbVenda.idCliente
+			WHERE MONTH(dataVenda) = 2 AND YEAR(dataVenda) = 2014
+				GROUP BY nomeCliente
+
+-- Teste:
+-- Só para aprensentar a data formatada :)
+SELECT CONVERT(VARCHAR, dataVenda, 103) AS 'Data da venda' FROM tbVenda
+	ORDER BY dataVenda
+
+-- AAAEEEEEEEE!!!!!!!!!!! FOOOOIIIIII!!! Vlw prof's <3 
