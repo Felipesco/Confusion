@@ -50,10 +50,10 @@ SELECT AVG(valorProduto) AS 'Preço Médio', nomeFornecedor AS 'Fornecedor' FROM
 			GROUP BY nomeFornecedor
 
 -- i) Listar a soma das vendas agrupadas pelo nome do produto;
-SELECT SUM(valorTotalVenda) AS 'Soma das vendas', descricaoProduto AS 'Produto'  FROM tbVenda
-	INNER JOIN tbItensVenda ON tbVenda.idVenda = tbItensVenda.idVenda
-		INNER JOIN tbProduto ON tbItensVenda.idProduto = tbProduto.idProduto
-			GROUP BY descricaoProduto
+SELECT SUM(subTotalItensVenda) AS 'Venda por Produto', descricaoProduto AS 'Produto' FROM tbItensVenda
+	INNER JOIN tbProduto 
+		ON tbItensVenda.idProduto = tbProduto.idProduto
+			GROUP BY descricaoProduto	
  
 -- j) Listar a soma das vendas pelo nome do cliente somente das vendas realizadas em fevereiro de 2014.
 SELECT SUM(valorTotalVenda) AS 'Soma das vendas', nomeCliente AS 'Cliente' FROM tbVenda
