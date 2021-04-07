@@ -72,14 +72,20 @@ SELECT nomeAluno AS 'Nome dos Alunos', nomeCurso AS 'Cursos' FROM tbAluno
 
 --2)Apresentar a quantidade de alunos matriculados por nome do curso;
 SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos', nomeCurso AS 'Cursos' FROM tbAluno
-INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
 		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
 			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
 				GROUP BY nomeCurso 
 
 --3)Apresentar a quantidade de alunos matriculados por nome da turma;
+SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos', nomeTurma AS 'Turma' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+		GROUP BY nomeTurma
 
 --4)Apresentar a quantidade de alunos que fizeram matricula em maio de 2016;
+SELECT COUNT(codAluno) AS 'Alunos matriculados em maio de 2016' FROM tbMatricula
+	WHERE MONTH(dataMatricula) = 5 AND YEAR(dataMatricula) = 2016
 
 --5)Apresentar o nome dos alunos em ordem alfabética ao lado do nome das turmas e os nomes dos cursos em que estão matriculados;
 
