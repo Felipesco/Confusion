@@ -83,6 +83,8 @@ VALUES ('03/10/2015', 1, 1)
 --9)Apresentar os alunos cujo nome comece com A e que estejam matriculados no curso de inglês;
 
 --10)Apresentar a quantidade de matriculas feitas no ano de 2016;
+SELECT COUNT(codMatricula) AS 'Data das matriculas' FROM tbMatricula
+	WHERE YEAR(dataMatricula) = 2016 
 
 --11)Apresentar a quantidade de matriculas por nome do curso;
 
