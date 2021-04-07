@@ -75,7 +75,7 @@ SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos', nomeCurso AS 'Cursos' FROM 
 	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
 		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
 			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
-				GROUP BY nomeCurso 
+			GROUP BY nomeCurso 
 
 --3)Apresentar a quantidade de alunos matriculados por nome da turma;
 SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos', nomeTurma AS 'Turma' FROM tbAluno
@@ -88,10 +88,24 @@ SELECT COUNT(codAluno) AS 'Alunos matriculados em maio de 2016' FROM tbMatricula
 	WHERE MONTH(dataMatricula) = 5 AND YEAR(dataMatricula) = 2016
 
 --5)Apresentar o nome dos alunos em ordem alfabética ao lado do nome das turmas e os nomes dos cursos em que estão matriculados;
+SELECT nomeAluno AS 'Aluno', tbTurma.nomeTurma AS 'Turma', tbCurso.nomeCurso AS 'Curso' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
+			ORDER BY nomeAluno
 
 --6)Apresentar o nome dos cursos e os horários em que eles são oferecidos;
+SELECT nomeCurso AS 'Cursos', horarioTurma AS 'Horário das aulas' FROM tbCurso
+	INNER JOIN tbTurma 
+		ON tbCurso.codCurso = tbTurma.codCurso
+		GROUP BY horarioTurma, nomeCurso
 
 --7)Apresentar a quantidade de alunos nascidos por estado que estejam matriculados no curso de ingles;
+SELECT COUNT(tbAluno.codAluno) AS 'Alunos que fazem Inglês', tbAluno.naturalidadeAluno AS 'Naturalidade' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			WHERE tbTurma.codCurso = 1
+			GROUP BY naturalidadeAluno
 
 --8)Apresentar o nome dos alunos ao lado da data de matrícula no formato dd/mm/aaaa;
 
