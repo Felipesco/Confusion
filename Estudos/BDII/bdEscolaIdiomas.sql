@@ -65,8 +65,17 @@ VALUES ('03/10/2015', 1, 1)
 
 -- Atividade
 --1)Apresentar os nomes dos alunos ao lado do nome dos cursos que eles fazem;
+SELECT nomeAluno AS 'Nome dos Alunos', nomeCurso AS 'Cursos' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
 
 --2)Apresentar a quantidade de alunos matriculados por nome do curso;
+SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos', nomeCurso AS 'Cursos' FROM tbAluno
+INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
+				GROUP BY nomeCurso 
 
 --3)Apresentar a quantidade de alunos matriculados por nome da turma;
 
