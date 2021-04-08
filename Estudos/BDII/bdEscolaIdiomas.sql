@@ -108,15 +108,42 @@ SELECT COUNT(tbAluno.codAluno) AS 'Alunos que fazem Inglês', tbAluno.naturalidad
 			GROUP BY naturalidadeAluno
 
 --8)Apresentar o nome dos alunos ao lado da data de matrícula no formato dd/mm/aaaa;
+SELECT nomeAluno AS 'Nome Aluno', CONVERT(VARCHAR, dataMatricula, 103) AS 'Data Matricula' FROM tbAluno
+	INNER JOIN tbMatricula 
+		ON tbAluno.codAluno = tbMatricula.codAluno
+		GROUP BY nomeAluno, dataMatricula
+		ORDER BY dataMatricula
+-- a data tá bonitinha agora <3 
 
 --9)Apresentar os alunos cujo nome comece com A e que estejam matriculados no curso de inglês;
+SELECT nomeAluno AS 'Aluno' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
+			WHERE nomeAluno LIKE 'A%' AND tbCurso.codCurso = 1
+
 
 --10)Apresentar a quantidade de matriculas feitas no ano de 2016;
-SELECT COUNT(codMatricula) AS 'Data das matriculas' FROM tbMatricula
+SELECT COUNT(codMatricula) AS 'Qntd. das matriculas' FROM tbMatricula
 	WHERE YEAR(dataMatricula) = 2016 
 
 --11)Apresentar a quantidade de matriculas por nome do curso;
+SELECT nomeCurso AS 'Curso', COUNT(codMatricula) AS 'Qntd. de matriculas' FROM tbCurso
+	INNER JOIN tbTurma ON tbCurso.codCurso = tbTurma.codCurso
+		INNER JOIN tbMatricula ON tbTurma.codTurma = tbMatricula.codTurma
+		GROUP BY tbCurso.nomeCurso
 
 --12)Apresentar a quantidade de alunos que fazem os cursos que custam mais de R$300,00;
+SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de Alunos' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
+			WHERE valorCurso > 300
 
 --13)Apresentar os nomes dos alunos que fazem o curso de alemão.
+--SELECT codCurso, nomeCurso FROM tbCurso
+SELECT COUNT(tbAluno.codAluno) AS 'Qtnd. de alunos' FROM tbAluno
+	INNER JOIN tbMatricula ON tbAluno.codAluno = tbMatricula.codAluno
+		INNER JOIN tbTurma ON tbMatricula.codTurma = tbTurma.codTurma
+			INNER JOIN tbCurso ON tbTurma.codCurso = tbCurso.codCurso
+			WHERE tbCurso.codCurso = 2
